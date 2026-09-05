@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deluxe Saloon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- LOGIN -->
+    <main id="loginScreen" class="screen login-screen">
+      <div class="login-card">
+        <h1>Welcome Purvi from Mech</h1>
+        <p class="password-title">Enter Password</p>
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter Password"
+          autocomplete="off"
+        />
+        <button type="button" id="enterButton">ENTER</button>
+        <p id="loginMessage" class="login-message"></p>
+      </div>
+    </main>
+
+    <!-- MAIN WEBSITE -->
+    <main id="websiteScreen" class="screen website-screen hidden">
+      <div class="website-content">
+        <h1 class="website-title">Deluxe Saloon</h1>
+        <p class="website-subtitle">
+          A little place made especially for you ❤️
+        </p>
+        <div id="boxContainer" class="box-container"></div>
+      </div>
+    </main>
+
+    <!-- NORMAL MODAL -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <button type="button" id="closeModal" class="close-button">×</button>
+        <h2 id="modalTitle"></h2>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- FOOD -->
+    <div id="foodModal" class="modal hidden">
+      <div class="food-section-card">
+        <button type="button" id="closeFoodModal" class="close-button">
+          ×
+        </button>
+        <div class="food-heading">
+          <div class="food-heading-decoration">✦</div>
+          <h2>Kuch khaa lo,<br />Bhook lagi hogi aapko ❤️</h2>
+          <p>Kuch tasty sa choose kar lo...</p>
+        </div>
+        <div id="foodContainer" class="food-container"></div>
+      </div>
+    </div>
+
+    <!-- RECIPE -->
+    <div id="recipeModal" class="modal hidden">
+      <div class="recipe-card">
+        <button type="button" id="closeRecipeModal" class="close-button">
+          ×
+        </button>
+        <img id="recipeImage" class="recipe-image" src="" alt="Food" />
+        <div class="recipe-content">
+          <p class="recipe-tag">RECIPE</p>
+          <h2 id="recipeTitle"></h2>
+          <div class="recipe-divider">✦</div>
+          <h3>Ingredients</h3>
+          <ul id="recipeIngredients"></ul>
+          <h3>How to make it</h3>
+          <ol id="recipeSteps"></ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- DANCE -->
+    <div id="danceModal" class="modal hidden">
+      <div class="music-card">
+        <button type="button" id="closeDanceModal" class="close-button">
+          ×
+        </button>
+        <h2>🎵 Dance</h2>
+        <p class="music-subtitle">Search a song and play it</p>
+        <input
+          type="text"
+          id="songSearch"
+          class="song-search"
+          placeholder="🔍 Search songs..."
+          autocomplete="off"
+        />
+        <div id="songList" class="song-list">
+          <p class="loading-songs">Loading songs...</p>
+        </div>
+        <div class="now-playing">
+          <p class="now-playing-label">NOW PLAYING</p>
+          <h3 id="currentSong">Nothing playing</h3>
+        </div>
+        <audio id="audioPlayer" controls preload="metadata"></audio>
+        <div class="spotify-section">
+          <p>Can't find your song?</p>
+          <button type="button" id="spotifyButton" class="spotify-button">
+            🎧 Search on Spotify
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI ASSISTANT -->
+    <div id="aiModal" class="modal ai-modal hidden">
+      <div class="ai-assistant-card">
+        <button type="button" id="closeAiModal" class="close-button">×</button>
+
+        <!-- AI HEADER -->
+        <header class="ai-header">
+          <div>
+            <p class="ai-small-title">YOUR SISTER</p>
+            <h2>✨ Khushi</h2>
+          </div>
+          <div id="aiStatus" class="ai-status">● Ready</div>
+        </header>
+
+        <!-- WALKING AREA (Removed Stick Figure) -->
+        <section id="aiWorld" class="ai-world">
+          <div class="ai-world-glow"></div>
+        </section>
+
+        <!-- CHAT -->
+        <section class="ai-chat-area">
+          <div id="chatMessages" class="chat-messages">
+            <div class="ai-message">
+              <div class="message-label">KHUSHI</div>
+              <div class="message-bubble">
+                Hi Purvi! ✨
+                <br /><br />
+                Main Khushi, tumhari behen. Mujhe pata hai tum apna dard jaldi
+                kisi ko nahi batati, par main hamesha tumhare saath hoon. Kuch
+                bhi mann me ho, yahan aakar mujhse share kar liya karo ❤️
+              </div>
+            </div>
+          </div>
+          <div class="ai-input-area">
+            <textarea
+              id="aiInput"
+              rows="1"
+              placeholder="Talk to Khushi..."
+            ></textarea>
+            <button type="button" id="aiSendButton">➤</button>
+          </div>
+          <div class="ai-hint">
+            Press Enter to send • Shift + Enter for a new line
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- BHONDU KI BAATEIN MODAL -->
+    <div id="bhonduModal" class="modal hidden">
+      <div class="food-section-card">
+        <button type="button" id="closeBhonduModal" class="close-button">
+          ×
+        </button>
+        <div class="food-heading">
+          <div class="food-heading-decoration">✨</div>
+          <h2>Bhondu ki Baatein</h2>
+          <p>Kuch khaas baatein aur yaadein...</p>
+        </div>
+        <div class="food-container">
+          <div
+            class="food-card"
+            id="tileOurPics"
+            style="background-image: url(&quot;images/our-pics-bg.jpg&quot;)"
+          >
+            <div class="food-card-title">Our pics</div>
+          </div>
+          <div
+            class="food-card"
+            id="tileMessage"
+            style="background-image: url(&quot;images/message-bg.jpg&quot;)"
+          >
+            <div class="food-card-title">This is for you</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIAL MESSAGE MODAL -->
+    <div id="messageModal" class="modal hidden">
+      <div
+        class="modal-card"
+        style="max-width: 600px; text-align: left; line-height: 1.6"
+      >
+        <button type="button" id="closeMessageModal" class="close-button">
+          ×
+        </button>
+        <h2 style="text-align: center; color: #d4a373; margin-bottom: 20px">
+          This is for you 💛
+        </h2>
+        <div style="font-size: 16px; color: #444">
+          <p>
+            Purvi....jab tumse pheli baar mila tha tab yaad hai maine apni yeh
+            problem share ki thi ki mein kisi ka naam nahi leta and tumne kaha
+            tha Purvi bolne ke liye and from that day i started observing your
+            confidence and apne aap mein jo kamiyaan thi usse theek karne ki
+            koshish kar raha hu ( i am not saying ki u r right in every matter
+            😂).
+          </p>
+          <br />
+          <p>
+            aaj mein woh Aditya utna nahi hu jo phele tha - jo problem ko leke
+            baitha rehta hai har waqt - ik ki abhi bhi hu but overview mein i
+            have changed a bit, abhi mein kaafi relaxed hu mentally and tumne
+            meri isme bohot help ki hai - u r my special person 💛..........
+          </p>
+          <br />
+          <p>
+            tumne kabhi mujhe chhota nahi samjha and u listen to me every time i
+            try to say something which is not much of worth of others but i see
+            everytime that u care about me - jab mein bolna bandd kar deta hu
+            toh tujhe pareshani hoti hai 😭, mein tab bahut accha feel karta hu
+            jab tu hasti hai and agar ek baar ko woh hassi mujh par joke maarke
+            bhi aaye toh i am haapppyy(not harbaar 😂) aur haan tune ek baar
+            kaha tha ki mein sabke liye sab kuch karta hu - par abb nahi and
+            mein kisi ko apna special paerson nahi kehta..........
+          </p>
+          <br />
+          <p
+            style="
+              text-align: center;
+              font-size: 1.2em;
+              font-weight: bold;
+              color: #d4a373;
+              margin-top: 20px;
+            "
+          >
+            wish u a very happy birthday Purvi 🌹
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTO GALLERY MODAL -->
+    <div id="galleryModal" class="modal hidden">
+      <div class="modal-card" style="max-width: 700px">
+        <button type="button" id="closeGalleryModal" class="close-button">
+          ×
+        </button>
+        <h2 id="galleryTitle" style="margin-bottom: 20px"></h2>
+        <div
+          id="galleryGrid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+          "
+        >
+          <!-- Photos will be injected here via JS -->
+        </div>
+      </div>
+    </div>
+
+    <script src="java.js"></script>
+  </body>
+</html>
