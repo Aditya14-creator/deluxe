@@ -31,7 +31,7 @@ body {
 .login-screen {
   min-height: 100vh;
 
-  background-image: url("images/main-background.jpg");
+  background-image: url("main-background.jpg");
 
   background-size: cover;
   background-position: center;
@@ -147,7 +147,7 @@ body {
 .website-screen {
   min-height: 100vh;
 
-  background-image: url("images/main-background.jpg");
+  background-image: url("main-background.jpg");
 
   background-size: cover;
   background-position: center;
