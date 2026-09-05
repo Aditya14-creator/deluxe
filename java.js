@@ -58,50 +58,49 @@ document.addEventListener("DOMContentLoaded", () => {
   // MAIN BOXES DATA
   // =====================================================
   const boxes = [
-    { title: "Pakoras", image: "images/box-1.jpg", type: "food" },
-    { title: "Nature", image: "images/box-3.jpg", type: "nature" },
-    { title: "Dance", image: "images/box-4.jpg", type: "dance" },
-    { title: "Khushi", image: "images/box-5.jpg", type: "ai" },
-    // Drawing & Painting removed, Bhondu ki Baatein image updated to nature1.jpg
-    { title: "Bhondu ki Baatein", image: "images/nature1.jpg", type: "bhondu" },
+    { title: "Pakoras", image: "box-1.jpg", type: "food" },
+    { title: "Nature", image: "box-3.jpg", type: "nature" },
+    { title: "Dance", image: "box-4.jpg", type: "dance" },
+    { title: "Khushi", image: "box-5.jpg", type: "ai" },
+    { title: "Bhondu ki Baatein", image: "nature1.jpg", type: "bhondu" },
   ];
 
   // =====================================================
   // PHOTOS ARRAYS (UPDATED COUNTS)
   // =====================================================
   const naturePhotos = [
-    "images/nature1.jpg",
-    "images/nature2.jpg",
-    "images/nature3.jpg",
-    "images/nature4.jpg",
-    "images/nature5.jpg",
-    "images/nature6.jpg",
-    "images/nature7.jpg",
-    "images/nature8.jpg",
-    "images/nature9.jpg",
-    "images/nature10.jpg",
-    "images/nature11.jpg",
-    "images/nature12.jpg",
-    "images/nature13.jpg",
-    "images/nature14.jpg",
-    "images/nature15.jpg",
-    "images/nature16.jpg",
-    "images/nature17.jpg",
-    "images/nature18.jpg",
+    "nature1.jpg",
+    "nature2.jpg",
+    "nature3.jpg",
+    "nature4.jpg",
+    "nature5.jpg",
+    "nature6.jpg",
+    "nature7.jpg",
+    "nature8.jpg",
+    "nature9.jpg",
+    "nature10.jpg",
+    "nature11.jpg",
+    "nature12.jpg",
+    "nature13.jpg",
+    "nature14.jpg",
+    "nature15.jpg",
+    "nature16.jpg",
+    "nature17.jpg",
+    "nature18.jpg",
   ];
 
   const ourPicsPhotos = [
-    "images/our1.jpg",
-    "images/our2.jpg",
-    "images/our3.jpg",
-    "images/our4.jpg",
-    "images/our5.jpg",
-    "images/our6.jpg",
-    "images/our7.jpg",
-    "images/our8.jpg",
-    "images/our9.jpg",
-    "images/our10.jpg",
-    "images/our11.jpg",
+    "our1.jpg",
+    "our2.jpg",
+    "our3.jpg",
+    "our4.jpg",
+    "our5.jpg",
+    "our6.jpg",
+    "our7.jpg",
+    "our8.jpg",
+    "our9.jpg",
+    "our10.jpg",
+    "our11.jpg",
   ];
 
   // =====================================================
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const foods = [
     {
       title: "Sabudaane ka Halwa",
-      image: "images/halwa.jpg",
+      image: "halwa.jpg",
       ingredients: [
         "1 cup sabudana",
         "2 cups milk",
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Pakoras",
-      image: "images/pakoras.jpg",
+      image: "pakoras.jpg",
       ingredients: [
         "1 cup besan",
         "1 onion, thinly sliced",
@@ -154,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Gup Chup",
-      image: "images/gupchup.jpg",
+      image: "gupchup.jpg",
       ingredients: [
         "Gup chup / pani puri shells",
         "Boiled potatoes",
@@ -176,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Badam Shake",
-      image: "images/badamshake.jpg",
+      image: "badamshake.jpg",
       ingredients: [
         "10–12 almonds",
         "2 cups chilled milk",
@@ -196,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Hakka Noodles",
-      image: "images/hakka-noodles.jpg",
+      image: "hakka-noodles.jpg",
       ingredients: [
         "Noodles",
         "Carrot",
